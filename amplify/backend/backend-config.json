@@ -1,0 +1,26 @@
+{
+	"auth": {
+		"awsamplifytestdd4c311b": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"api": {
+		"AmplifyAndroidTest": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authawsamplifytestdd4c311b"
+						}
+					}
+				}
+			}
+		}
+	}
+}
